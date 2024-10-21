@@ -13,12 +13,10 @@ export default [
   ...tseslint.configs.recommended,
   {
     plugins: {
-      '@next/next': nextPlugin,
       '@stylistic': stylistic,
       '@stylistic/ts': stylistic
     },
     rules: {
-      ...nextPlugin.configs['core-web-vitals'].rules,
       '@stylistic/brace-style': 'error',
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/indent': ['error', 2],
@@ -62,8 +60,13 @@ export default [
   },
   {
     ...pluginReact.configs.flat.recommended,
+    plugins: {
+      ...pluginReact.configs.flat.recommended.plugins,
+      '@next/next': nextPlugin
+    },
     rules: {
       ...pluginReact.configs.flat.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
       'react/react-in-jsx-scope': 'off',
       'react/jsx-uses-react': 'off'
     }
