@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import AuthProvider from './components/admin-panel/AuthProvider';
+import AuthProvider from '@/components/admin-panel/AuthProvider';
 import App from './App';
 import { Toaster } from 'react-hot-toast';
 

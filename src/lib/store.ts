@@ -1,9 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { authReducer } from '@/store/authSlice';
+import cartReducer from '@/store/cartSlice';
+import productReducer from '@/store/productSlice';
+import loadingReducer from '@/store/loadingSlice';
 
 export const makeStore = () => {
   return configureStore({
-    reducer: { auth: authReducer },
+    reducer: {
+      auth: authReducer,
+      cartReducer,
+      productReducer,
+      loadingReducer
+    },
+    devTools: process.env.NODE_ENV !== 'production',
     middleware: getDefaultMiddleware =>
       getDefaultMiddleware({ serializableCheck: false })
   });

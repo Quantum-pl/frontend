@@ -1,6 +1,6 @@
-"use client"
+'use client';
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 export interface IProduct {
   _id: string;
@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   return (
     <div className='bg-yellow-800'>Dashboard</div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

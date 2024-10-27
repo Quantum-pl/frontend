@@ -9,16 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        accent: "#0989ff",
-        topHeadingPrimary: "#010f1c",
-        topHeadingSecondary: "#021d35",
-        pink: "#8768f8"
+        accent: '#0989ff',
+        topHeadingPrimary: '#010f1c',
+        topHeadingSecondary: '#021d35',
+        pink: '#8768f8'
       },
       container: {
         center: true,
-        padding: "15px",
-      },
-    },
+        padding: '15px'
+      }
+    }
   },
   plugins: []
 };
